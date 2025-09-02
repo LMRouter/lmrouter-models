@@ -1,0 +1,8 @@
+perplexity:
+  name: Perplexity AI
+  type: openai
+  icon: https://perplexity.ai/favicon.ico
+  description: Perplexity AI, Inc., or simply Perplexity, is an American privately held software company offering a web search engine that processes user queries and synthesizes responses.
+  website: https://perplexity.ai/
+  responses: false
+  base_url: https://api.perplexity.ai

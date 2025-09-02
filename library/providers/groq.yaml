@@ -1,0 +1,7 @@
+groq:
+  name: Groq
+  type: openai
+  icon: https://groq.com/favicon.ico
+  description: Groq, Inc. is an American artificial intelligence (AI) company that builds an AI accelerator application-specific integrated circuit (ASIC) that they call the Language Processing Unit (LPU) and related hardware to accelerate the inference performance of AI workloads.
+  website: https://groq.com/
+  base_url: https://api.groq.com/openai/v1

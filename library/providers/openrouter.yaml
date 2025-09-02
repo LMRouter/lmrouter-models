@@ -1,0 +1,8 @@
+openrouter:
+  name: OpenRouter
+  type: openai
+  icon: https://openrouter.ai/favicon.ico
+  description: A router for LLMs and other AI models.
+  website: https://openrouter.ai/
+  responses: false
+  base_url: https://openrouter.ai/api/v1

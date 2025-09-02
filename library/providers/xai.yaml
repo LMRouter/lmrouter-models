@@ -1,0 +1,8 @@
+xai:
+  name: xAI
+  type: openai
+  icon: https://x.ai/favicon.ico
+  description: X.AI Corp., doing business as xAI, is an American company working in the area of artificial intelligence (AI), social media and technology. Founded by Elon Musk in 2023, the company's flagship product is a generative AI chatbot named Grok.
+  website: https://x.ai/
+  responses: false
+  base_url: https://api.x.ai/v1

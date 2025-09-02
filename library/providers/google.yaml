@@ -1,0 +1,7 @@
+google:
+  name: Google
+  type: google
+  icon: https://www.google.com/favicon.ico
+  description: Google LLC is an American multinational corporation and technology company focusing on online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, consumer electronics, and artificial intelligence (AI).
+  website: https://www.google.com/
+  base_url: https://generativelanguage.googleapis.com/v1beta/openai

@@ -1,0 +1,8 @@
+cerebras:
+  name: Cerebras
+  type: openai
+  icon: https://cdn.sanity.io/images/e4qjo92p/production/4176e884cf8c14f8c6bcb59fb9f3e332ac90497d-1000x1000.svg?w=512&h=512&fit=max&auto=format
+  description: Cerebras Systems Inc. is an American artificial intelligence (AI) company with offices in Sunnyvale, San Diego, Toronto, and Bangalore, India. Cerebras builds computer systems for complex AI deep learning applications.
+  website: https://www.cerebras.ai/
+  responses: false
+  base_url: https://api.cerebras.ai/v1

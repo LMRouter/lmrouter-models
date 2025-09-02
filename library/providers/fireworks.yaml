@@ -1,0 +1,7 @@
+fireworks:
+  name: Fireworks AI
+  type: fireworks
+  icon: https://fireworks.ai/favicon.ico
+  description: Fireworks.ai offers generative AI platform as a service. They optimize for rapid product iteration building on top of gen AI as well as minimizing cost to serve.
+  website: https://fireworks.ai/
+  base_url: https://api.fireworks.ai/inference/v1
