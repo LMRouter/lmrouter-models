@@ -1,0 +1,32 @@
+{
+  "name": "lmrouter-models",
+  "version": "0.1.0",
+  "description": "",
+  "homepage": "https://github.com/LMRouter/lmrouter-models",
+  "bugs": {
+    "url": "https://github.com/LMRouter/lmrouter-models/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LMRouter/lmrouter-models.git"
+  },
+  "license": "MIT",
+  "author": "LMRouter Contributors",
+  "type": "module",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "lint": "prettier --check .",
+    "lint:fix": "prettier --write ."
+  },
+  "dependencies": {
+    "@lmrouter/cli": "^0.1.9",
+    "yaml": "^2.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2"
+  }
+}

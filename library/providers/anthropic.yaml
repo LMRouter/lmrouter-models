@@ -1,0 +1,6 @@
+anthropic:
+  name: Anthropic
+  type: anthropic
+  icon: https://www.anthropic.com/favicon.ico
+  description: Anthropic PBC is an American artificial intelligence (AI) startup company founded in 2021. Anthropic has developed a family of large language models (LLMs) named Claude. According to the company, it researches and develops AI to "study their safety properties at the technological frontier" and use this research to deploy safe models for the public.
+  website: https://www.anthropic.com/

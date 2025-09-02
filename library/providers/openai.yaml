@@ -1,0 +1,6 @@
+openai:
+  name: OpenAI
+  type: openai
+  icon: https://openai.com/favicon.ico
+  description: OpenAI, Inc. is an American artificial intelligence (AI) organization headquartered in San Francisco, California. It aims to develop "safe and beneficial" artificial general intelligence (AGI), which it defines as "highly autonomous systems that outperform humans at most economically valuable work".
+  website: https://openai.com/

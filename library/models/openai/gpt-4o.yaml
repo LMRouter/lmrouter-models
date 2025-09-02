@@ -1,0 +1,26 @@
+openai/gpt-4o:
+  name: GPT-4o
+  type: language
+  icon: https://chatgpt.com/favicon.ico
+  author: openai
+  description: GPT-4o (“o” for “omni”) is OpenAI's versatile, high-intelligence flagship model. It accepts both text and image inputs, and produces text outputs (including Structured Outputs). It is the best model for most tasks, and is OpenAI's most capable model outside of OpenAI's o-series models.
+  website: https://platform.openai.com/docs/models/gpt-4o
+  providers:
+    - provider: openai
+      model: gpt-4o
+      context_window: 128000
+      max_tokens: 16384
+      pricing:
+        type: tiered
+        tiers:
+          - predicate: { "==": [{ "var": "service_tier" }, "default"] }
+            pricing:
+              type: fixed
+              input: 2.5
+              output: 10
+              input_cache_reads: 1.25
+          - pricing:
+              type: fixed
+              input: 4.25
+              output: 17
+              input_cache_reads: 2.125
