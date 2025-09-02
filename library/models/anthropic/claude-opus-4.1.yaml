@@ -1,4 +1,4 @@
-anthropic/claude-opus-4-1:
+anthropic/claude-opus-4.1:
   name: Claude Opus 4.1
   type: language
   icon: https://claude.ai/favicon.ico
