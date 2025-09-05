@@ -1,7 +1,7 @@
 openai/gpt-4o:
   name: GPT-4o
   type: language
-  icon: https://chatgpt.com/favicon.ico
+  icon: https://cdn.openai.com/API/docs/images/model-page/model-icons/gpt-4o.png
   author: openai
   description: GPT-4o (“o” for “omni”) is OpenAI's versatile, high-intelligence flagship model. It accepts both text and image inputs, and produces text outputs (including Structured Outputs). It is the best model for most tasks, and is OpenAI's most capable model outside of OpenAI's o-series models.
   website: https://platform.openai.com/docs/models/gpt-4o

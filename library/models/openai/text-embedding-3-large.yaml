@@ -1,0 +1,13 @@
+openai/text-embedding-3-large:
+  name: text-embedding-3-large
+  type: embedding
+  icon: https://cdn.openai.com/API/docs/images/model-page/model-icons/text-embedding-3-large.png
+  author: openai
+  description: text-embedding-3-large is OpenAI's most capable embedding model for both english and non-english tasks. Embeddings are a numerical representation of text that can be used to measure the relatedness between two pieces of text. Embeddings are useful for search, clustering, recommendations, anomaly detection, and classification tasks.
+  website: https://platform.openai.com/docs/models/text-embedding-3-large
+  providers:
+    - provider: openai
+      model: text-embedding-3-large
+      pricing:
+        type: fixed
+        input: 0.13

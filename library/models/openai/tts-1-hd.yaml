@@ -1,0 +1,13 @@
+openai/tts-1-hd:
+  name: TTS-1 HD
+  type: audio
+  icon: https://cdn.openai.com/API/docs/images/model-page/model-icons/tts-1-hd.png
+  author: openai
+  description: TTS is a model that converts text to natural sounding spoken text. The tts-1-hd model is optimized for high quality text-to-speech use cases. Use it with the Speech endpoint in the Audio API.
+  website: https://platform.openai.com/docs/models/tts-1-hd
+  providers:
+    - provider: openai
+      model: tts-1-hd
+      pricing:
+        type: fixed
+        input: 30

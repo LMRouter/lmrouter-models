@@ -1,0 +1,13 @@
+openai/whisper-1:
+  name: Whisper
+  type: audio
+  icon: https://cdn.openai.com/API/docs/images/model-page/model-icons/whisper-1.png
+  author: openai
+  description: Whisper is a general-purpose speech recognition model, trained on a large dataset of diverse audio. You can also use it as a multitask model to perform multilingual speech recognition as well as speech translation and language identification.
+  website: https://platform.openai.com/docs/models/whisper-1
+  providers:
+    - provider: openai
+      model: whisper-1
+      pricing:
+        type: fixed
+        input_audio_time: 0.006

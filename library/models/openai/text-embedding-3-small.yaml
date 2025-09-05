@@ -1,0 +1,13 @@
+openai/text-embedding-3-small:
+  name: text-embedding-3-small
+  type: embedding
+  icon: https://cdn.openai.com/API/docs/images/model-page/model-icons/text-embedding-3-small.png
+  author: openai
+  description: text-embedding-3-small is OpenAI's improved, more performant version of their ada embedding model. Embeddings are a numerical representation of text that can be used to measure the relatedness between two pieces of text. Embeddings are useful for search, clustering, recommendations, anomaly detection, and classification tasks.
+  website: https://platform.openai.com/docs/models/text-embedding-3-small
+  providers:
+    - provider: openai
+      model: text-embedding-3-small
+      pricing:
+        type: fixed
+        input: 0.02
