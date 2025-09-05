@@ -1,0 +1,13 @@
+black-forest-labs/flux-1-kontext-pro:
+  name: FLUX.1 Kontext Pro
+  type: image
+  icon: https://bfl.ai/favicon.ico
+  author: black-forest-labs
+  description: FLUX.1 Kontext Pro is a specialized model for generating contextually-aware images and handles both text and reference images as inputs. Designed for professional use cases requiring high-quality, consistent image generation.
+  website: https://bfl.ai/blog/flux-1-kontext
+  providers:
+    - provider: fireworks
+      model: accounts/fireworks/models/flux-kontext-pro
+      pricing:
+        type: fixed
+        image: 0.04

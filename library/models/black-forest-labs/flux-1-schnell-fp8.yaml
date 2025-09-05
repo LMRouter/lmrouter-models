@@ -1,0 +1,13 @@
+black-forest-labs/flux-1-schnell-fp8:
+  name: FLUX.1 [schnell] FP8
+  type: image
+  icon: https://bfl.ai/favicon.ico
+  author: black-forest-labs
+  description: FLUX.1 [schnell] is a 12 billion parameter rectified flow transformer capable of generating images from text descriptions. The FP8 version uses reduced precision numerics for 2x faster inference.
+  website: https://huggingface.co/black-forest-labs/FLUX.1-schnell
+  providers:
+    - provider: fireworks
+      model: accounts/fireworks/models/flux-1-schnell-fp8
+      pricing:
+        type: fixed
+        request: 0.00035
