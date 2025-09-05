@@ -1,0 +1,30 @@
+google/gemini-2.5-pro:
+  name: Gemini 2.5 Pro
+  type: language
+  icon: https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg
+  author: google
+  description: Gemini 2.5 Pro is Google's state-of-the-art thinking model, capable of reasoning over complex problems in code, math, and STEM, as well as analyzing large datasets, codebases, and documents using long context.
+  website: https://ai.google.dev/gemini-api/docs/models#gemini-2.5-pro
+  providers:
+    - provider: google
+      model: gemini-2.5-pro
+      context_window: 1114112
+      max_tokens: 65536
+      pricing:
+        type: tiered
+        tiers:
+          - predicate: { "<=": [{ "var": "input" }, 200000] }
+            pricing:
+              type: fixed
+              input: 1.25
+              output: 10
+              web_search: 0.035
+              input_cache_reads: 0.31
+              input_cache_writes: 1.625
+          - pricing:
+              type: fixed
+              input: 2.5
+              output: 15
+              web_search: 0.035
+              input_cache_reads: 0.625
+              input_cache_writes: 2.875
