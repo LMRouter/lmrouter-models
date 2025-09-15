@@ -19,7 +19,7 @@
     "lint:fix": "prettier --write ."
   },
   "dependencies": {
-    "@lmrouter/cli": "^0.1.9",
+    "@lmrouter/cli": "latest",
     "yaml": "^2.8.1"
   },
   "devDependencies": {
