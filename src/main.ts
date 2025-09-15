@@ -55,7 +55,7 @@ const main = async () => {
     provider_api_keys: undefined,
   } as LMRouterConfig;
 
-  console.log(yaml.stringify(config));
+  console.log(JSON.stringify(config));
 };
 
 main();
