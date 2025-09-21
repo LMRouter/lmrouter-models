@@ -1,0 +1,27 @@
+xai/grok-4:
+  name: Grok 4
+  type: language
+  icon: https://grok.com/favicon.ico
+  author: xai
+  description: xAI's latest and greatest flagship model, offering unparalleled performance in natural language, math and reasoning - the perfect jack of all trades.
+  website: https://docs.x.ai/docs/models/grok-4
+  providers:
+    - provider: xai
+      model: grok-4
+      context_window: 256000
+      pricing:
+        type: tiered
+        tiers:
+          - predicate: { "<=": [{ "var": "input" }, 128000] }
+            pricing:
+              type: fixed
+              input: 3
+              output: 15
+              web_search: 0.025
+              input_cache_reads: 0.75
+          - pricing:
+              type: fixed
+              input: 6
+              output: 30
+              web_search: 0.025
+              input_cache_reads: 0.75

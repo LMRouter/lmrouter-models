@@ -1,0 +1,16 @@
+xai/grok-code-fast-1:
+  name: Grok Code Fast 1
+  type: language
+  icon: https://grok.com/favicon.ico
+  author: xai
+  description: xAI's thrilled to introduce grok-code-fast-1, a speedy and economical reasoning model that excels at agentic coding.
+  website: https://docs.x.ai/docs/models/grok-code-fast-1
+  providers:
+    - provider: xai
+      model: grok-code-fast-1
+      context_window: 256000
+      pricing:
+        type: fixed
+        input: 0.2
+        output: 1.5
+        input_cache_reads: 0.02

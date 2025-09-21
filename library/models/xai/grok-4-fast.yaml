@@ -1,0 +1,27 @@
+xai/grok-4-fast:
+  name: Grok 4 Fast
+  type: language
+  icon: https://grok.com/favicon.ico
+  author: xai
+  description: xAI's excited to release grok-4-fast, their latest advancement in cost-efficient reasoning models.
+  website: https://docs.x.ai/docs/models/grok-4-fast
+  providers:
+    - provider: xai
+      model: grok-4-fast
+      context_window: 2000000
+      pricing:
+        type: tiered
+        tiers:
+          - predicate: { "<=": [{ "var": "input" }, 128000] }
+            pricing:
+              type: fixed
+              input: 0.2
+              output: 0.5
+              web_search: 0.025
+              input_cache_reads: 0.05
+          - pricing:
+              type: fixed
+              input: 0.4
+              output: 1
+              web_search: 0.025
+              input_cache_reads: 0.05
