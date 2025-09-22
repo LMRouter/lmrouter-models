@@ -1,0 +1,18 @@
+openai/gpt-audio:
+  name: gpt-audio
+  type: language
+  icon: https://cdn.openai.com/API/docs/images/model-page/model-icons/gpt-audio.png
+  author: openai
+  description: The gpt-audio model is OpenAI's first generally available audio model. It accepts audio inputs and outputs, and can be used in the Chat Completions REST API.
+  website: https://platform.openai.com/docs/models/gpt-audio
+  providers:
+    - provider: openai
+      model: gpt-audio
+      context_window: 128000
+      max_tokens: 16384
+      pricing:
+        type: fixed
+        input: 2.5
+        input_audio: 40
+        output: 10
+        output_audio: 80

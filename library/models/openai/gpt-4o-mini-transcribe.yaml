@@ -1,0 +1,17 @@
+openai/gpt-4o-mini-transcribe:
+  name: GPT-4o mini Transcribe
+  type: audio
+  icon: https://cdn.openai.com/API/docs/images/model-page/model-icons/gpt-4o-mini-transcribe.png
+  author: openai
+  description: GPT-4o mini Transcribe is a speech-to-text model that uses GPT-4o mini to transcribe audio. It offers improvements to word error rate and better language recognition and accuracy compared to original Whisper models. Use it for more accurate transcripts.
+  website: https://platform.openai.com/docs/models/gpt-4o-mini-transcribe
+  providers:
+    - provider: openai
+      model: gpt-4o-mini-transcribe
+      context_window: 16000
+      max_tokens: 2000
+      pricing:
+        type: fixed
+        input: 1.25
+        input_audio: 3
+        output: 5

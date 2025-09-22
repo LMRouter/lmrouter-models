@@ -1,0 +1,16 @@
+openai/chatgpt-4o:
+  name: ChatGPT-4o
+  type: language
+  icon: https://cdn.openai.com/API/docs/images/model-page/model-icons/chatgpt-4o-latest.png
+  author: openai
+  description: ChatGPT-4o points to the GPT-4o snapshot currently used in ChatGPT. OpenAI recommends using an API model like GPT-5 or GPT-4o for most API integrations, but feel free to use this ChatGPT-4o model to test OpenAI's latest improvements for chat use cases.
+  website: https://platform.openai.com/docs/models/chatgpt-4o-latest
+  providers:
+    - provider: openai
+      model: chatgpt-4o-latest
+      context_window: 128000
+      max_tokens: 16384
+      pricing:
+        type: fixed
+        input: 5
+        output: 15

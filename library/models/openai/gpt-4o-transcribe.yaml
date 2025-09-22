@@ -1,0 +1,17 @@
+openai/gpt-4o-transcribe:
+  name: GPT-4o Transcribe
+  type: audio
+  icon: https://cdn.openai.com/API/docs/images/model-page/model-icons/gpt-4o-transcribe.png
+  author: openai
+  description: GPT-4o Transcribe is a speech-to-text model that uses GPT-4o to transcribe audio. It offers improvements to word error rate and better language recognition and accuracy compared to original Whisper models. Use it for more accurate transcripts.
+  website: https://platform.openai.com/docs/models/gpt-4o-transcribe
+  providers:
+    - provider: openai
+      model: gpt-4o-transcribe
+      context_window: 16000
+      max_tokens: 2000
+      pricing:
+        type: fixed
+        input: 2.5
+        input_audio: 6
+        output: 10

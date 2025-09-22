@@ -1,0 +1,32 @@
+openai/o4-mini:
+  name: o4-mini
+  type: language
+  icon: https://cdn.openai.com/API/docs/images/model-page/model-icons/o4-mini.png
+  author: openai
+  description: o4-mini is OpenAI's latest small o-series model. It's optimized for fast, effective reasoning with exceptionally efficient performance in coding and visual tasks. It's succeeded by GPT-5 mini.
+  website: https://platform.openai.com/docs/models/o4-mini
+  providers:
+    - provider: openai
+      model: o4-mini
+      context_window: 200000
+      max_tokens: 100000
+      pricing:
+        type: tiered
+        tiers:
+          - predicate: { "==": [{ "var": "service_tier" }, "flex"] }
+            pricing:
+              type: fixed
+              input: 0.55
+              output: 2.2
+              input_cache_reads: 0.138
+          - predicate: { "==": [{ "var": "service_tier" }, "default"] }
+            pricing:
+              type: fixed
+              input: 1.1
+              output: 4.4
+              input_cache_reads: 0.275
+          - pricing:
+              type: fixed
+              input: 2
+              output: 8
+              input_cache_reads: 0.5

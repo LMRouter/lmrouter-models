@@ -1,0 +1,32 @@
+openai/o3:
+  name: o3
+  type: language
+  icon: https://cdn.openai.com/API/docs/images/model-page/model-icons/o3.png
+  author: openai
+  description: o3 is a well-rounded and powerful model across domains. It sets a new standard for math, science, coding, and visual reasoning tasks. It also excels at technical writing and instruction-following. Use it to think through multi-step problems that involve analysis across text, code, and images.
+  website: https://platform.openai.com/docs/models/o3
+  providers:
+    - provider: openai
+      model: o3
+      context_window: 200000
+      max_tokens: 100000
+      pricing:
+        type: tiered
+        tiers:
+          - predicate: { "==": [{ "var": "service_tier" }, "flex"] }
+            pricing:
+              type: fixed
+              input: 1
+              output: 4
+              input_cache_reads: 0.25
+          - predicate: { "==": [{ "var": "service_tier" }, "default"] }
+            pricing:
+              type: fixed
+              input: 2
+              output: 8
+              input_cache_reads: 0.5
+          - pricing:
+              type: fixed
+              input: 3.5
+              output: 14
+              input_cache_reads: 0.875
