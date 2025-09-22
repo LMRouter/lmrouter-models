@@ -1,0 +1,15 @@
+deepseek/deepseek-r1-0528:
+  name: DeepSeek R1 0528
+  type: language
+  icon: https://www.deepseek.com/favicon.ico
+  author: deepseek
+  description: May 28th update to the original DeepSeek R1 Performance on par with OpenAI o1, but open-sourced and with fully open reasoning tokens. It's 671B parameters in size, with 37B active in an inference pass. Fully open-source model.
+  website: https://api-docs.deepseek.com/news/news250528
+  providers:
+    - provider: fireworks
+      model: accounts/fireworks/models/deepseek-r1-0528
+      context_window: 160000
+      pricing:
+        type: fixed
+        input: 3
+        output: 8

@@ -1,0 +1,15 @@
+deepseek/deepseek-r1:
+  name: DeepSeek R1
+  type: language
+  icon: https://www.deepseek.com/favicon.ico
+  author: deepseek
+  description: "DeepSeek R1 is here: Performance on par with OpenAI o1, but open-sourced and with fully open reasoning tokens. It's 671B parameters in size, with 37B active in an inference pass."
+  website: https://api-docs.deepseek.com/news/news250120
+  providers:
+    - provider: fireworks
+      model: accounts/fireworks/models/deepseek-r1
+      context_window: 160000
+      pricing:
+        type: fixed
+        input: 3
+        output: 8
