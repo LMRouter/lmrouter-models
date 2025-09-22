@@ -1,0 +1,15 @@
+qwen/qwen3-235b-a22b-instruct-2507:
+  name: Qwen3 235B A22B Instruct 2507
+  type: language
+  icon: https://chat.qwen.ai/favicon.ico
+  author: qwen
+  description: Qwen3-235B-A22B-Instruct-2507 is a multilingual, instruction-tuned mixture-of-experts language model based on the Qwen3-235B architecture, with 22B active parameters per forward pass. It is optimized for general-purpose text generation, including instruction following, logical reasoning, math, code, and tool usage. The model supports a native 262K context length and does not implement "thinking mode" (<think> blocks). Compared to its base variant, this version delivers significant gains in knowledge coverage, long-context reasoning, coding benchmarks, and alignment with open-ended tasks. It is particularly strong on multilingual understanding, math reasoning (e.g., AIME, HMMT), and alignment evaluations like Arena-Hard and WritingBench.
+  website: https://qwenlm.github.io/blog/qwen3/
+  providers:
+    - provider: fireworks
+      model: accounts/fireworks/models/qwen3-235b-a22b-instruct-2507
+      context_window: 256000
+      pricing:
+        type: fixed
+        input: 0.22
+        output: 0.88

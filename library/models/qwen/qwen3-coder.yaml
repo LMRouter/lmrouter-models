@@ -1,0 +1,15 @@
+qwen/qwen3-coder:
+  name: Qwen3 Coder
+  type: language
+  icon: https://chat.qwen.ai/favicon.ico
+  author: qwen
+  description: Qwen3-Coder-480B-A35B-Instruct is a Mixture-of-Experts (MoE) code generation model developed by the Qwen team. It is optimized for agentic coding tasks such as function calling, tool use, and long-context reasoning over repositories. The model features 480 billion total parameters, with 35 billion active per forward pass (8 out of 160 experts).
+  website: https://qwenlm.github.io/blog/qwen3-coder/
+  providers:
+    - provider: fireworks
+      model: accounts/fireworks/models/qwen3-coder-480b-a35b-instruct
+      context_window: 256000
+      pricing:
+        type: fixed
+        input: 0.45
+        output: 1.8
