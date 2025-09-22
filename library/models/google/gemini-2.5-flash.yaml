@@ -1,0 +1,19 @@
+google/gemini-2.5-flash:
+  name: Gemini 2.5 Flash
+  type: language
+  icon: https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg
+  author: google
+  description: Google's best model in terms of price-performance, offering well-rounded capabilities. 2.5 Flash is best for large scale processing, low-latency, high volume tasks that require thinking, and agentic use cases.
+  website: https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash
+  providers:
+    - provider: google
+      model: gemini-2.5-flash
+      context_window: 1114112
+      max_tokens: 65536
+      pricing:
+        type: fixed
+        input: 0.3
+        output: 2.5
+        web_search: 0.035
+        input_cache_reads: 0.075
+        input_cache_writes: 0.383
