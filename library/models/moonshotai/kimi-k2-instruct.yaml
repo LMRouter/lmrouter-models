@@ -1,0 +1,15 @@
+moonshotai/kimi-k2-instruct:
+  name: Kimi K2 Instruct
+  type: language
+  icon: https://www.kimi.com/favicon.ico
+  author: moonshotai
+  description: Kimi K2 Instruct is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32 billion active per forward pass. It is optimized for agentic capabilities, including advanced tool use, reasoning, and code synthesis. Kimi K2 excels across a broad range of benchmarks, particularly in coding (LiveCodeBench, SWE-bench), reasoning (ZebraLogic, GPQA), and tool-use (Tau2, AceBench) tasks. It supports long-context inference up to 128K tokens and is designed with a novel training stack that includes the MuonClip optimizer for stable large-scale MoE training.
+  website: https://moonshotai.github.io/Kimi-K2/
+  providers:
+    - provider: fireworks
+      model: accounts/fireworks/models/kimi-k2-instruct
+      context_window: 128000
+      pricing:
+        type: fixed
+        input: 0.6
+        output: 2.5

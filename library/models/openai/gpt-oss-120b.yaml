@@ -1,0 +1,24 @@
+openai/gpt-oss-120b:
+  name: gpt-oss-120b
+  type: language
+  icon: https://cdn.openai.com/API/docs/images/model-page/model-icons/gpt-oss-120b.png
+  author: openai
+  description: gpt-oss-120b is OpenAI's most powerful open-weight model, which fits into a single H100 GPU (117B parameters with 5.1B active parameters).
+  website: https://platform.openai.com/docs/models/gpt-oss-120b
+  providers:
+    - provider: groq
+      model: openai/gpt-oss-120b
+      context_window: 131072
+      max_tokens: 65536
+      pricing:
+        type: fixed
+        input: 0.15
+        output: 0.75
+        input_cache_reads: 0.07
+    - provider: fireworks
+      model: accounts/fireworks/models/gpt-oss-120b
+      context_window: 128000
+      pricing:
+        type: fixed
+        input: 0.15
+        output: 0.6

@@ -1,0 +1,24 @@
+openai/gpt-oss-20b:
+  name: gpt-oss-20b
+  type: language
+  icon: https://cdn.openai.com/API/docs/images/model-page/model-icons/gpt-oss-20b.png
+  author: openai
+  description: gpt-oss-20b is OpenAI's medium-sized open-weight model for low latency, local, or specialized use-cases (21B parameters with 3.6B active parameters).
+  website: https://platform.openai.com/docs/models/gpt-oss-20b
+  providers:
+    - provider: groq
+      model: openai/gpt-oss-20b
+      context_window: 131072
+      max_tokens: 65536
+      pricing:
+        type: fixed
+        input: 0.1
+        output: 0.5
+        input_cache_reads: 0.05
+    - provider: fireworks
+      model: accounts/fireworks/models/gpt-oss-20b
+      context_window: 128000
+      pricing:
+        type: fixed
+        input: 0.07
+        output: 0.3
