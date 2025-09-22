@@ -1,7 +1,7 @@
 qwen/qwen3-235b-a22b:
   name: Qwen3 235B A22B
   type: language
-  icon: https://chat.qwen.ai/favicon.ico
+  icon: https://img.alicdn.com/imgextra/i2/O1CN01B9mlGG1msAz3fxxWL_!!6000000005009-2-tps-84-84.png
   author: qwen
   description: Qwen3-235B-A22B is a 235B parameter mixture-of-experts (MoE) model developed by Qwen, activating 22B parameters per forward pass. It supports seamless switching between a "thinking" mode for complex reasoning, math, and code tasks, and a "non-thinking" mode for general conversational efficiency. The model demonstrates strong reasoning ability, multilingual support (100+ languages and dialects), advanced instruction-following, and agent tool-calling capabilities. It natively handles a 32K token context window and extends up to 131K tokens using YaRN-based scaling.
   website: https://qwenlm.github.io/blog/qwen3/
