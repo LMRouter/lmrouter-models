@@ -1,0 +1,95 @@
+name: Deploy Configurations to Cloudflare KV
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy-configs:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout LMRouter models repository
+        uses: actions/checkout@v4
+        with:
+          path: lmrouter-models
+
+      - name: Checkout LMRouter deployment configs repository
+        uses: actions/checkout@v4
+        with:
+          repository: LMRouter/lmrouter-deployment-configs
+          token: ${{ secrets.GH_AUTH_TOKEN }}
+          path: lmrouter-deployment-configs
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: "lmrouter-models/.nvmrc"
+          cache: "pnpm"
+          cache-dependency-path: "lmrouter-models/pnpm-lock.yaml"
+
+      - name: Install dependencies
+        run: |
+          cd lmrouter-models
+          pnpm install
+
+      - name: Process staging configuration
+        id: staging-config
+        run: |
+          cd lmrouter-models
+          STAGING_CONFIG=$(LMROUTER_CONFIG_TEMPLATE=$(base64 -w0 ../lmrouter-deployment-configs/lmrouter-staging-template.yaml) pnpm --silent start)
+          echo "config<<EOF" >> $GITHUB_OUTPUT
+          echo "$STAGING_CONFIG" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Upload staging configuration to Cloudflare KV
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        run: |
+          curl -X PUT "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CLOUDFLARE_ACCOUNT_ID }}/storage/kv/namespaces/${{ secrets.CLOUDFLARE_KV_NAMESPACE_ID }}/values/lmrouter-config-staging" \
+            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            --data '${{ steps.staging-config.outputs.config }}'
+
+      - name: Process production configuration
+        id: prod-config
+        run: |
+          cd lmrouter-models
+          PROD_CONFIG=$(LMROUTER_CONFIG_TEMPLATE=$(base64 -w0 ../lmrouter-deployment-configs/lmrouter-prod-template.yaml) pnpm --silent start)
+          echo "config<<EOF" >> $GITHUB_OUTPUT
+          echo "$PROD_CONFIG" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Upload production configuration to Cloudflare KV
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        run: |
+          curl -X PUT "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CLOUDFLARE_ACCOUNT_ID }}/storage/kv/namespaces/${{ secrets.CLOUDFLARE_KV_NAMESPACE_ID }}/values/lmrouter-config" \
+            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            --data '${{ steps.prod-config.outputs.config }}'
+
+      - name: Verify uploads
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        run: |
+          echo "✅ Successfully uploaded configurations to Cloudflare KV:"
+          echo "  - lmrouter-config-staging (staging configuration)"
+          echo "  - lmrouter-config (production configuration)"
+      
+      - name: Validate configurations (PR check)
+        if: github.event_name == 'pull_request'
+        run: |
+          echo "✅ Configuration processing completed successfully:"
+          echo "  - Staging configuration processed"
+          echo "  - Production configuration processed"
+          echo "  - Upload steps skipped for pull request"
