@@ -1,0 +1,8 @@
+together:
+  name: Together AI
+  type: openai
+  icon: https://cdn.prod.website-files.com/64f6f2c0e3f4c5a91c1e823a/654693d569494912cfc0c0d4_favicon.svg
+  description: Together AI is a research-driven AI cloud infrastructure provider. Their purpose-built GPU cloud platform empowers AI engineers and researchers to train, fine-tune, and run frontier class AI models.
+  website: https://www.together.ai/
+  responses: false
+  base_url: https://api.together.xyz/v1

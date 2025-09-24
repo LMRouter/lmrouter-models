@@ -1,0 +1,8 @@
+atlascloud:
+  name: Atlas Cloud
+  type: openai
+  icon: https://www.atlascloud.ai/favicon.ico
+  description: Safe, Simple, Scalable AI Inference & Infrastructure.
+  website: https://www.atlascloud.ai/
+  responses: false
+  base_url: https://api.atlascloud.ai/v1
