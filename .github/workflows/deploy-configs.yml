@@ -56,11 +56,13 @@ jobs:
 
       - name: Upload staging configuration to Cloudflare KV
         if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        env:
+          CONFIG: ${{ steps.staging-config.outputs.config }}
         run: |
           curl -X PUT "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CLOUDFLARE_ACCOUNT_ID }}/storage/kv/namespaces/${{ secrets.CLOUDFLARE_KV_NAMESPACE_ID }}/values/lmrouter-config-staging" \
             -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
             -H "Content-Type: application/json" \
-            --data '${{ steps.staging-config.outputs.config }}'
+            --data "$CONFIG"
 
       - name: Process production configuration
         id: prod-config
@@ -73,11 +75,13 @@ jobs:
 
       - name: Upload production configuration to Cloudflare KV
         if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        env:
+          CONFIG: ${{ steps.prod-config.outputs.config }}
         run: |
           curl -X PUT "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CLOUDFLARE_ACCOUNT_ID }}/storage/kv/namespaces/${{ secrets.CLOUDFLARE_KV_NAMESPACE_ID }}/values/lmrouter-config" \
             -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
             -H "Content-Type: application/json" \
-            --data '${{ steps.prod-config.outputs.config }}'
+            --data "$CONFIG"
 
       - name: Verify uploads
         if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
