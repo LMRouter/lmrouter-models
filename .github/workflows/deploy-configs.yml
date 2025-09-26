@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request_target:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
@@ -55,7 +52,6 @@ jobs:
           echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Upload staging configuration to Cloudflare KV
-        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         env:
           CONFIG: ${{ steps.staging-config.outputs.config }}
         run: |
@@ -74,7 +70,6 @@ jobs:
           echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Upload production configuration to Cloudflare KV
-        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         env:
           CONFIG: ${{ steps.prod-config.outputs.config }}
         run: |
@@ -84,16 +79,7 @@ jobs:
             --data "$CONFIG"
 
       - name: Verify uploads
-        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         run: |
           echo "✅ Successfully uploaded configurations to Cloudflare KV:"
           echo "  - lmrouter-config-staging (staging configuration)"
           echo "  - lmrouter-config (production configuration)"
-      
-      - name: Validate configurations (PR check)
-        if: github.event_name == 'pull_request'
-        run: |
-          echo "✅ Configuration processing completed successfully:"
-          echo "  - Staging configuration processed"
-          echo "  - Production configuration processed"
-          echo "  - Upload steps skipped for pull request"
