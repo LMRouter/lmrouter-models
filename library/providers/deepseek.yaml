@@ -1,0 +1,8 @@
+deepseek:
+  name: DeepSeek
+  type: openai
+  icon: https://www.deepseek.com/favicon.ico
+  description: Hangzhou DeepSeek Artificial Intelligence Basic Technology Research Co., Ltd., doing business as DeepSeek, is a Chinese artificial intelligence (AI) company that develops large language models (LLMs). Based in Hangzhou, Zhejiang, Deepseek is owned and funded by the Chinese hedge fund High-Flyer. DeepSeek was founded in July 2023 by Liang Wenfeng, the co-founder of High-Flyer, who also serves as the CEO for both of the companies. The company launched an eponymous chatbot alongside its DeepSeek-R1 model in January 2025.
+  website: https://www.deepseek.com/
+  responses: false
+  base_url: https://api.deepseek.com/v1
