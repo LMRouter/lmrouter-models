@@ -6,3 +6,12 @@ deepseek:
   website: https://www.deepseek.com/
   responses: false
   base_url: https://api.deepseek.com/v1
+
+deepseek-v3.1_terminus_expires_on_20251015:
+  name: DeepSeek V3.1 Terminus Expires On 20251015
+  type: openai
+  icon: https://www.deepseek.com/favicon.ico
+  description: DeepSeek V3.1 Terminus Expires On 20251015
+  website: https://www.deepseek.com/
+  responses: false
+  base_url: https://api.deepseek.com/v3.1_terminus_expires_on_20251015

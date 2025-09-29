@@ -13,7 +13,7 @@ deepseek/deepseek-v3.1-terminus:
         type: fixed
         input: 0.45
         output: 1.5
-    - provider: deepseek
+    - provider: deepseek-v3.1_terminus_expires_on_20251015
       model: deepseek-chat
       context_window: 128000
       max_tokens: 8000

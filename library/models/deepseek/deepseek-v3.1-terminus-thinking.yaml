@@ -6,7 +6,7 @@ deepseek/deepseek-v3.1-terminus-thinking:
   description: DeepSeek-V3.1 Terminus is an update to DeepSeek V3.1 that maintains the model's original capabilities while addressing issues reported by users, including language consistency and agent capabilities, further optimizing the model's performance in coding and search agents. It is a large hybrid reasoning model (671B parameters, 37B active) that supports both thinking and non-thinking modes. It extends the DeepSeek-V3 base with a two-phase long-context training process, reaching up to 128K tokens, and uses FP8 microscaling for efficient inference. Users can control the reasoning behaviour with the reasoning enabled boolean. The model improves tool use, code generation, and reasoning efficiency, achieving performance comparable to DeepSeek-R1 on difficult benchmarks while responding more quickly. It supports structured tool calling, code agents, and search agents, making it suitable for research, coding, and agentic workflows.
   website: https://api-docs.deepseek.com/news/news250922
   providers:
-    - provider: deepseek
+    - provider: deepseek-v3.1_terminus_expires_on_20251015
       model: deepseek-reasoner
       context_window: 128000
       max_tokens: 64000

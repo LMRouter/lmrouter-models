@@ -1,0 +1,17 @@
+deepseek/deepseek-v3.2-exp:
+  name: DeepSeek V3.2 Exp
+  type: language
+  icon: https://www.deepseek.com/favicon.ico
+  author: deepseek
+  description: DeepSeek V3.2 Exp
+  website: https://www.deepseek.com/
+  providers:
+    - provider: deepseek
+      model: deepseek-chat
+      context_window: 128000
+      max_tokens: 8000
+      pricing:
+        type: fixed
+        input: 0.28
+        output: 0.42
+        input_cache_reads: 0.028
