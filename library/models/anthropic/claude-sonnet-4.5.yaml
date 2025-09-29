@@ -1,0 +1,30 @@
+anthropic/claude-sonnet-4.5:
+  name: Claude Sonnet 4.5
+  type: language
+  icon: https://claude.ai/favicon.ico
+  author: anthropic
+  description: Anthropic's best model for complex agents and coding, with the highest intelligence across most tasks.
+  website: https://docs.anthropic.com/en/docs/about-claude/models/overview
+  providers:
+    - provider: anthropic
+      model: claude-sonnet-4-5
+      context_window: 1000000
+      max_tokens: 64000
+      pricing:
+        type: tiered
+        tiers:
+          - predicate: { "<=": [{ "var": "input" }, 200000] }
+            pricing:
+              type: fixed
+              input: 3
+              output: 15
+              web_search: 0.01
+              input_cache_reads: 0.3
+              input_cache_writes: 3.75
+          - pricing:
+              type: fixed
+              input: 6
+              output: 22.5
+              web_search: 0.01
+              input_cache_reads: 0.6
+              input_cache_writes: 7.5
