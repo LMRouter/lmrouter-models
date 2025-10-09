@@ -1,0 +1,15 @@
+z-ai/glm-4.6:
+  name: GLM 4.6
+  type: language
+  icon: https://mintcdn.com/zhipu-32152247/B_E8wI-eiNa1QlPV/logo/light.svg?fit=max&auto=format&n=B_E8wI-eiNa1QlPV&q=85&s=c1ecf1af358fa8eeab8c06052337f8f6
+  author: z-ai
+  description: "Compared with GLM-4.5, this generation brings several key improvements: Longer context window: The context window has been expanded from 128K to 200K tokens, enabling the model to handle more complex agentic tasks. Superior coding performance: The model achieves higher scores on code benchmarks and demonstrates better real-world performance in applications such as Claude Code、Cline、Roo Code and Kilo Code, including improvements in generating visually polished front-end pages. Advanced reasoning: GLM-4.6 shows a clear improvement in reasoning performance and supports tool use during inference, leading to stronger overall capability. More capable agents: GLM-4.6 exhibits stronger performance in tool using and search-based agents, and integrates more effectively within agent frameworks. Refined writing: Better aligns with human preferences in style and readability, and performs more naturally in role-playing scenarios."
+  website: https://docs.z.ai/guides/llm/glm-4.6
+  providers:
+    - provider: atlascloud
+      model: zai-org/GLM-4.6
+      context_window: 202752
+      pricing:
+        type: fixed
+        input: 0.6
+        output: 2
