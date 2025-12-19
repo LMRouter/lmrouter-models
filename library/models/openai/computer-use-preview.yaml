@@ -1,0 +1,16 @@
+openai/computer-use-preview:
+  name: computer-use-preview
+  type: language
+  icon: https://cdn.openai.com/API/docs/images/model-page/model-icons/computer-use-preview.png
+  author: openai
+  description: Computer Use Preview is OpenAI's model designed for computer control and automation tasks.
+  website: https://platform.openai.com/docs/models/computer-use-preview
+  providers:
+    - provider: openai
+      model: computer-use-preview
+      context_window: 8192
+      max_tokens: 1024
+      pricing:
+        type: fixed
+        input: 3
+        output: 12

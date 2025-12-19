@@ -15,5 +15,5 @@ google/gemini-2.5-flash:
         input: 0.3
         output: 2.5
         web_search: 0.035
-        input_cache_reads: 0.075
-        input_cache_writes: 0.383
+        input_cache_reads: 0.03
+        input_cache_writes: 1.0

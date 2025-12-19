@@ -1,0 +1,17 @@
+deepseek/deepseek-v3.2-thinking:
+  name: DeepSeek V3.2 Thinking
+  type: language
+  icon: https://www.deepseek.com/favicon.ico
+  author: deepseek
+  description: DeepSeek-V3.2 Thinking is the reasoning variant of DeepSeek-V3.2, officially released on December 1, 2025. It uses extended reasoning chains and has a larger max output token limit (64K) for complex problems requiring step-by-step analysis.
+  website: https://api-docs.deepseek.com/news/news251201
+  providers:
+    - provider: deepseek
+      model: deepseek-reasoner
+      context_window: 128000
+      max_tokens: 64000
+      pricing:
+        type: fixed
+        input: 0.28
+        output: 0.42
+        input_cache_reads: 0.028

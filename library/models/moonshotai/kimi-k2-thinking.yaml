@@ -1,0 +1,23 @@
+moonshotai/kimi-k2-thinking:
+  name: Kimi K2 Thinking
+  type: language
+  icon: https://www.kimi.com/favicon.ico
+  author: moonshotai
+  description: Kimi K2 Thinking is Moonshot AI's specialized thinking agent released in November 2025. It features 1 trillion total parameters with 32 billion active per forward pass, using a Mixture-of-Experts (MoE) architecture. It excels at complex, multi-step reasoning and dynamic tool invocation, capable of maintaining stable behavior across 200-300 consecutive tool calls.
+  website: https://moonshotai.github.io/Kimi-K2/
+  providers:
+    - provider: atlascloud
+      model: moonshotai/Kimi-K2-Thinking
+      context_window: 256000
+      pricing:
+        type: fixed
+        input: 0.6
+        output: 2.5
+    - provider: fireworks
+      model: fireworks/kimi-k2-thinking
+      context_window: 256000
+      pricing:
+        type: fixed
+        input: 0.6
+        output: 2.5
+        input_cache_reads: 0.3

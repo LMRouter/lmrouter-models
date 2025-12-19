@@ -1,0 +1,17 @@
+openai/o4-mini-deep-research:
+  name: o4-mini-deep-research
+  type: language
+  icon: https://cdn.openai.com/API/docs/images/model-page/model-icons/o4-mini.png
+  author: openai
+  description: o4 Mini Deep Research is optimized for in-depth research and analysis tasks with a smaller model.
+  website: https://platform.openai.com/docs/models/o4-mini-deep-research
+  providers:
+    - provider: openai
+      model: o4-mini-deep-research
+      context_window: 200000
+      max_tokens: 100000
+      pricing:
+        type: fixed
+        input: 2
+        output: 8
+        input_cache_reads: 0.5

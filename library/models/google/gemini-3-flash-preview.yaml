@@ -1,0 +1,19 @@
+google/gemini-3-flash-preview:
+  name: Gemini 3 Flash
+  type: language
+  icon: https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg
+  author: google
+  description: Google's frontier intelligence built for speed at a fraction of the cost. It offers high efficiency, low latency, and strong multimodal capabilities, making it ideal for high-volume tasks and agentic use cases.
+  website: https://ai.google.dev/gemini-api/docs/models#gemini-3-flash
+  providers:
+    - provider: google
+      model: gemini-3-flash-preview
+      context_window: 1048576
+      max_tokens: 65536
+      pricing:
+        type: fixed
+        input: 0.5
+        output: 3.0
+        web_search: 0.035
+        input_cache_reads: 0.05
+        input_cache_writes: 1.0

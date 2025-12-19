@@ -1,0 +1,20 @@
+openai/gpt-4o-realtime-preview:
+  name: gpt-4o-realtime-preview
+  type: language
+  icon: https://cdn.openai.com/API/docs/images/model-page/model-icons/gpt-4o-realtime-preview.png
+  author: openai
+  description: GPT-4o Realtime Preview is a preview of OpenAI's real-time conversational GPT-4o model.
+  website: https://platform.openai.com/docs/models/gpt-4o-realtime-preview
+  providers:
+    - provider: openai
+      model: gpt-4o-realtime-preview
+      context_window: 32000
+      max_tokens: 4096
+      pricing:
+        type: fixed
+        input: 5
+        input_audio: 40
+        output: 20
+        output_audio: 80
+        input_cache_reads: 2.5
+        input_audio_cache_reads: 2.5

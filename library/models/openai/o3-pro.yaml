@@ -1,0 +1,16 @@
+openai/o3-pro:
+  name: o3-pro
+  type: language
+  icon: https://cdn.openai.com/API/docs/images/model-page/model-icons/o3.png
+  author: openai
+  description: o3 Pro is OpenAI's most powerful o3 model with maximum compute for the hardest problems.
+  website: https://platform.openai.com/docs/models/o3-pro
+  providers:
+    - provider: openai
+      model: o3-pro
+      context_window: 200000
+      max_tokens: 100000
+      pricing:
+        type: fixed
+        input: 20
+        output: 80

@@ -1,0 +1,32 @@
+deepseek/deepseek-v3.2:
+  name: DeepSeek V3.2
+  type: language
+  icon: https://www.deepseek.com/favicon.ico
+  author: deepseek
+  description: DeepSeek-V3.2 is a large language model officially released on December 1, 2025. It introduces DeepSeek Sparse Attention (DSA), a fine-grained sparse attention mechanism designed to improve training and inference efficiency in long-context scenarios while maintaining output quality. The model supports up to 164K tokens context window and excels at reasoning, coding, and agentic tool-use tasks.
+  website: https://api-docs.deepseek.com/news/news251201
+  providers:
+    - provider: atlascloud
+      model: deepseek-ai/DeepSeek-V3.2
+      context_window: 163840
+      pricing:
+        type: fixed
+        input: 0.26
+        output: 0.38
+    - provider: deepseek
+      model: deepseek-chat
+      context_window: 128000
+      max_tokens: 8000
+      pricing:
+        type: fixed
+        input: 0.28
+        output: 0.42
+        input_cache_reads: 0.028
+    - provider: fireworks
+      model: accounts/fireworks/models/deepseek-v3p2
+      context_window: 163840
+      pricing:
+        type: fixed
+        input: 0.56
+        output: 1.68
+        input_cache_reads: 0.28

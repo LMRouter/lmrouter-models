@@ -1,13 +1,13 @@
-xai/grok-4-fast-non-reasoning:
-  name: Grok 4 Fast (Non-Reasoning)
+xai/grok-4.1-fast-reasoning:
+  name: Grok 4.1 Fast (Reasoning)
   type: language
   icon: https://grok.com/favicon.ico
   author: xai
-  description: xAI's excited to release grok-4-fast, their latest advancement in cost-efficient reasoning models.
-  website: https://docs.x.ai/docs/models/grok-4-fast-non-reasoning
+  description: Grok 4.1 Fast (Reasoning) is xAI's reasoning model optimized for maximal intelligence and complex agentic tasks. Released on November 20, 2025, it features a 2-million-token context window and excels at accurate tool-calling and multi-step problem-solving.
+  website: https://docs.x.ai/docs/models/grok-4-1-fast-reasoning
   providers:
     - provider: xai
-      model: grok-4-fast-non-reasoning
+      model: grok-4-1-fast-reasoning
       context_window: 2000000
       pricing:
         type: tiered
@@ -22,6 +22,6 @@ xai/grok-4-fast-non-reasoning:
           - pricing:
               type: fixed
               input: 0.4
-              output: 1
+              output: 1.0
               web_search: 0.025
               input_cache_reads: 0.05

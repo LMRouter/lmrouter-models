@@ -1,0 +1,30 @@
+google/gemini-3-pro-preview:
+  name: Gemini 3 Pro
+  type: language
+  icon: https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg
+  author: google
+  description: Gemini 3 Pro is Google's state-of-the-art thinking model, capable of reasoning over complex problems in code, math, and STEM, as well as analyzing large datasets and multimodal inputs.
+  website: https://ai.google.dev/gemini-api/docs/models#gemini-3-pro
+  providers:
+    - provider: google
+      model: gemini-3-pro-preview
+      context_window: 1048576
+      max_tokens: 65536
+      pricing:
+        type: tiered
+        tiers:
+          - predicate: { "<=": [{ "var": "input" }, 200000] }
+            pricing:
+              type: fixed
+              input: 2.0
+              output: 12.0
+              web_search: 0.035
+              input_cache_reads: 0.2
+              input_cache_writes: 4.5
+          - pricing:
+              type: fixed
+              input: 4.0
+              output: 18.0
+              web_search: 0.035
+              input_cache_reads: 0.4
+              input_cache_writes: 4.5

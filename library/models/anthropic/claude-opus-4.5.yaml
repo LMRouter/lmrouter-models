@@ -1,0 +1,19 @@
+anthropic/claude-opus-4.5:
+  name: Claude Opus 4.5
+  type: language
+  icon: https://claude.ai/favicon.ico
+  author: anthropic
+  description: Claude Opus 4.5 is Anthropic's most powerful model, released on November 24, 2025. It is the leading model for coding, agents, and computer use, with state-of-the-art benchmark results and significantly improved pricing.
+  website: https://docs.anthropic.com/en/docs/about-claude/models/overview
+  providers:
+    - provider: anthropic
+      model: claude-opus-4-5
+      context_window: 200000
+      max_tokens: 64000
+      pricing:
+        type: fixed
+        input: 5
+        output: 25
+        web_search: 0.01
+        input_cache_reads: 0.5
+        input_cache_writes: 6.25

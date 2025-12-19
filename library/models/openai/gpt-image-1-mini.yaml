@@ -1,0 +1,75 @@
+openai/gpt-image-1-mini:
+  name: gpt-image-1-mini
+  type: image
+  icon: https://cdn.openai.com/API/docs/images/model-page/model-icons/gpt-image-1.png
+  author: openai
+  description: GPT Image 1 Mini is a smaller, faster image generation model optimized for cost efficiency.
+  website: https://platform.openai.com/docs/models/gpt-image-1-mini
+  providers:
+    - provider: openai
+      model: gpt-image-1-mini
+      pricing:
+        type: tiered
+        tiers:
+          - predicate: { "==": [{ "var": "image_quality" }, "low"] }
+            pricing:
+              type: tiered
+              tiers:
+                - predicate: { "==": [{ "var": "image_size" }, "1024x1024"] }
+                  pricing:
+                    type: fixed
+                    input: 2
+                    input_image: 2.5
+                    output_image: 8
+                    input_cache_reads: 0.2
+                    input_image_cache_reads: 0.25
+                    image: 0.005
+                - pricing:
+                    type: fixed
+                    input: 2
+                    input_image: 2.5
+                    output_image: 8
+                    input_cache_reads: 0.2
+                    input_image_cache_reads: 0.25
+                    image: 0.006
+          - predicate: { "==": [{ "var": "image_quality" }, "medium"] }
+            pricing:
+              type: tiered
+              tiers:
+                - predicate: { "==": [{ "var": "image_size" }, "1024x1024"] }
+                  pricing:
+                    type: fixed
+                    input: 2
+                    input_image: 2.5
+                    output_image: 8
+                    input_cache_reads: 0.2
+                    input_image_cache_reads: 0.25
+                    image: 0.011
+                - pricing:
+                    type: fixed
+                    input: 2
+                    input_image: 2.5
+                    output_image: 8
+                    input_cache_reads: 0.2
+                    input_image_cache_reads: 0.25
+                    image: 0.015
+          - pricing:
+              type: tiered
+              tiers:
+                - predicate: { "==": [{ "var": "image_size" }, "1024x1024"] }
+                  pricing:
+                    type: fixed
+                    input: 2
+                    input_image: 2.5
+                    output_image: 8
+                    input_cache_reads: 0.2
+                    input_image_cache_reads: 0.25
+                    image: 0.036
+                - pricing:
+                    type: fixed
+                    input: 2
+                    input_image: 2.5
+                    output_image: 8
+                    input_cache_reads: 0.2
+                    input_image_cache_reads: 0.25
+                    image: 0.052

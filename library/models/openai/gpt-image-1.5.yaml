@@ -1,0 +1,81 @@
+openai/gpt-image-1.5:
+  name: gpt-image-1.5
+  type: image
+  icon: https://cdn.openai.com/API/docs/images/model-page/model-icons/gpt-image-1.png
+  author: openai
+  description: GPT Image 1.5 is OpenAI's latest image generation model with improved quality, text rendering, and reasoning capabilities.
+  website: https://platform.openai.com/docs/models/gpt-image-1.5
+  providers:
+    - provider: openai
+      model: gpt-image-1.5
+      pricing:
+        type: tiered
+        tiers:
+          - predicate: { "==": [{ "var": "image_quality" }, "low"] }
+            pricing:
+              type: tiered
+              tiers:
+                - predicate: { "==": [{ "var": "image_size" }, "1024x1024"] }
+                  pricing:
+                    type: fixed
+                    input: 5
+                    input_image: 8
+                    output: 10
+                    output_image: 32
+                    input_cache_reads: 1.25
+                    input_image_cache_reads: 2
+                    image: 0.009
+                - pricing:
+                    type: fixed
+                    input: 5
+                    input_image: 8
+                    output: 10
+                    output_image: 32
+                    input_cache_reads: 1.25
+                    input_image_cache_reads: 2
+                    image: 0.013
+          - predicate: { "==": [{ "var": "image_quality" }, "medium"] }
+            pricing:
+              type: tiered
+              tiers:
+                - predicate: { "==": [{ "var": "image_size" }, "1024x1024"] }
+                  pricing:
+                    type: fixed
+                    input: 5
+                    input_image: 8
+                    output: 10
+                    output_image: 32
+                    input_cache_reads: 1.25
+                    input_image_cache_reads: 2
+                    image: 0.034
+                - pricing:
+                    type: fixed
+                    input: 5
+                    input_image: 8
+                    output: 10
+                    output_image: 32
+                    input_cache_reads: 1.25
+                    input_image_cache_reads: 2
+                    image: 0.05
+          - pricing:
+              type: tiered
+              tiers:
+                - predicate: { "==": [{ "var": "image_size" }, "1024x1024"] }
+                  pricing:
+                    type: fixed
+                    input: 5
+                    input_image: 8
+                    output: 10
+                    output_image: 32
+                    input_cache_reads: 1.25
+                    input_image_cache_reads: 2
+                    image: 0.133
+                - pricing:
+                    type: fixed
+                    input: 5
+                    input_image: 8
+                    output: 10
+                    output_image: 32
+                    input_cache_reads: 1.25
+                    input_image_cache_reads: 2
+                    image: 0.2
