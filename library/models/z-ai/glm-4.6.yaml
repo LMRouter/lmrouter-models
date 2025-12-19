@@ -11,5 +11,13 @@ z-ai/glm-4.6:
       context_window: 202752
       pricing:
         type: fixed
+        input: 0.42
+        output: 1.74
+        input_cache_reads: 0.08
+    - provider: together
+      model: zai-org/GLM-4.6
+      context_window: 202752
+      pricing:
+        type: fixed
         input: 0.6
-        output: 2
+        output: 2.2

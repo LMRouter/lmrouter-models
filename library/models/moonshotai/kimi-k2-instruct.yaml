@@ -13,3 +13,10 @@ moonshotai/kimi-k2-instruct:
         type: fixed
         input: 0.6
         output: 2.5
+    - provider: atlascloud
+      model: moonshotai/Kimi-K2-Instruct
+      context_window: 128000
+      pricing:
+        type: fixed
+        input: 0.6
+        output: 2.5
