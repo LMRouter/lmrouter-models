@@ -1,0 +1,19 @@
+claude-opus-4-5-20251101:
+  name: Claude Opus 4.5 20251101
+  type: language
+  icon: https://claude.ai/favicon.ico
+  author: anthropic
+  description: Anthropic's premium model combining maximum intelligence with practical performance, offering the highest level of reasoning and analysis capabilities.
+  website: https://docs.anthropic.com/en/docs/about-claude/models/overview
+  providers:
+    - provider: anthropic
+      model: claude-opus-4-5-20251101
+      context_window: 200000
+      max_tokens: 64000
+      pricing:
+        type: fixed
+        input: 5
+        output: 25
+        web_search: 0.01
+        input_cache_reads: 0.5
+        input_cache_writes: 6.25
